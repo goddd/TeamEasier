@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+package tw;
+
+service Tasks {
+
+    rpc Task_add(TaskDetails) returns(Response) ;
+    rpc Task_get_by_id(TaskQuery) returns (Response);
+    rpc Task_get_dependencies(TaskQuery) returns (Response);
+    rpc Task_get_followers(TaskQuery) returns (Response);
+    rpc Task_update_complete(TaskQuery) returns (Response);
+    rpc Task_update_incomplete(TaskQuery) returns (Response);
+    rpc Task_update_followers(TaskQuery) returns (Response);
+    rpc Task_update_remove_all_followers(TaskQuery) returns (Response);
+    rpc Task_update(TaskDetails) returns (Response);
+    rpc Task_delete(TaskQuery) returns (Response);
+    rpc Tasks_get_all(TaskQuery) returns (Response);
+}
+
+message Response {
+
+    string response_body = 1;
+    int64 status_code = 2;
+}
+
+
+message TaskQuery {
+
+    string api_key = 1;
+
+    // Not needed for Tasks_get_all
+    int64 task_id = 2;
+
+    // Multiple params can be sent using key=value&key=value format:
+    //
+    // Task_get_followers has optional param get_user_data=true/false --
+    // Task_update_followers has comment_followers string, change_followers string
+    // Tasks_get_all -- Query Params
+    string params = 3;
+}
+
+message TaskDetails {
+
+    string api_key = 1;
+    string content = 2;
+    string description = 3;
+    string parent_task_id  = 4;
+    int64 progress = 5;
+    bool notify = 6;
+    string responsible_party_ids = 7;
+    string start_date = 8; // Format : YYYYMMDD
+    string due_date = 9; // Format : YYYYMMDD
+    string priority = 10; // Options : not set, low, medium, high
+    string attachments = 11;
+    string pendingFileAttachments = 12;
+    int64 estimated_minutes = 13;
+    sint64 positionAfterTask = 14;
+    int64 todo_list_id = 15;
+    repeated Tag tags = 16;
+    string comment_follower_ids = 17;
+    string change_follower_ids = 18;
+    int64 private = 19;
+    string grant_access_to = 20;
+    string column_id = 21;
+    repeated Predecessor predecessors = 22;
+}
+
+message Predecessor {
+
+    int64 id  = 1;
+    string type = 2;
+}
+
+message Tag {
+
+    int64         id = 1;
+    string      name = 2;
+    string      color = 3;
+}
+
+message AuthDetails {
+
+    string api_key = 1;
+}
+
+
