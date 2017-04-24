@@ -6,6 +6,10 @@
 # Folders
 _obj
 _test
+.idea
+.iml
+.idea
+vcs.xml
 
 # Architecture specific extensions/prefixes
 *.[568vq]
