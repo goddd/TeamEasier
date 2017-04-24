@@ -10,5 +10,6 @@ interface with this gRPC server instead. Use cases for this:
 
 
 
-
 ![Alt text](tw_proto.png?raw=true "Title")
+
+* The 3 times better throughput is for gRPC. You wont get better throughput cause the REST service behind it will still be a bottleneck :)
