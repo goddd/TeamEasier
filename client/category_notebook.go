@@ -1,7 +1,7 @@
 package client
 
 // Creating Categories
-func Notebook category_create () {
+func Notebook_category_create() {
 
  // POST /projects/{project_id}/notebookCategories.json
 
@@ -9,7 +9,7 @@ func Notebook category_create () {
 
 
 // Retrieve a Single Category
-func Notebook category_get () {
+func Notebook_category_get() {
 
  // GET /notebookCategories/{id}.json
 
@@ -17,7 +17,7 @@ func Notebook category_get () {
 
 
 // Retrieving all of a Projects Categories
-func Notebook category_get () {
+func Notebook_category_get_by_project() {
 
  // GET /projects/{project_id}/notebookCategories.json
 
@@ -25,7 +25,7 @@ func Notebook category_get () {
 
 
 // Updating a Category
-func Notebook category_update () {
+func Notebook_category_update() {
 
  // PUT /notebookCategories/{id}.json
 
@@ -33,7 +33,7 @@ func Notebook category_update () {
 
 
 // Destroying a Category
-func Notebook category_delete () {
+func Notebook_category_delete() {
 
  // DELETE  /notebookCategories/{id}.json
 

@@ -1,23 +1,21 @@
 package client
 
 // Retreiving Recent Comments - Important Note
-func Comments_ () {
+func Comments_get_recent() {
 
  // GET /{resource}/{resource_id}/comments.json
 
  } 
 
-
 // Retrieving a Specific Comment
-func Comments_ () {
+func Comments_get_by_id() {
 
  // GET /comments/{comment_id}.json
 
  } 
 
-
 // Creating a Comment - Important Note
-func Comments_ () {
+func Comments_create_on_resource() {
 
  // POST /{resource}/{resource_id}/comments.json
 
@@ -25,7 +23,7 @@ func Comments_ () {
 
 
 // Updating a comment
-func Comments_ () {
+func Comments_update_by_id() {
 
  // PUT /comments/{id}.json
 
@@ -33,7 +31,7 @@ func Comments_ () {
 
 
 // Destroying a comment
-func Comments_ () {
+func Comments_delete() {
 
  // DELETE  /comments/{id}.json
 

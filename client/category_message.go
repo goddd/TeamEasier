@@ -1,7 +1,7 @@
 package client
 
 // Creating Categories
-func Message_categories_create () {
+func Message_categories_create() {
 
  // POST /projects/{project_id}/messageCategories.json
 
@@ -9,7 +9,7 @@ func Message_categories_create () {
 
 
 // Retrieve a Single Category
-func Message_categories_get () {
+func Message_categories_get() {
 
  // GET /messageCategories/{id}.json
 
@@ -17,7 +17,7 @@ func Message_categories_get () {
 
 
 // Retrieving all of a Projects Categories
-func Message_categories_get () {
+func Message_categories_get_by_project() {
 
  // GET /projects/{project_id}/messageCategories.json
 
@@ -25,7 +25,7 @@ func Message_categories_get () {
 
 
 // Updating a Category
-func Message_categories_update () {
+func Message_categories_update() {
 
  // PUT /messageCategories/{id}.json
 
@@ -33,7 +33,7 @@ func Message_categories_update () {
 
 
 // Destroying a Category
-func Message_categories_delete () {
+func Message_categories_delete() {
 
  // DELETE  /messageCategories/{id}.json
 

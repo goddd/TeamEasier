@@ -5,11 +5,10 @@ func File_category_create () {
 
  // POST /projects/{project_id}/fileCategories.json
 
- } 
-
+}
 
 // Retrieve a Single Category
-func File_category_get () {
+func File_category_get_by_id () {
 
  // GET /fileCategories/{id}.json
 
@@ -17,7 +16,7 @@ func File_category_get () {
 
 
 // Retrieving all of a Projects Categories
-func File_category_get () {
+func File_category_get_by_project_id () {
 
  // GET /projects/{project_id}/fileCategories.json
 
